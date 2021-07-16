@@ -105,6 +105,7 @@ app.use((err, req, res, next) => {
     res.status(statusCode).render('error.ejs', { err });
 })
 
-app.listen(3000, () => {
-    console.log("Listening on port 3000");
+const listenPort = process.env.PORT || 3000;
+app.listen(listenPort, () => {
+    console.log(`Listening on port ${listenPort}`);
 })
