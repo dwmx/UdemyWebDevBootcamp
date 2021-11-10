@@ -20,8 +20,8 @@ const userRoutes = require('./routes/users');
 const mongoSanitize = require('express-mongo-sanitize');
 const MongoDBStore = require('connect-mongo');
 
-const dbURL = process.env.DB_URL;
-//const dbURL = 'mongodb://localhost:27017/yelp-camp'
+//const dbURL = process.env.DB_URL;
+const dbURL = 'mongodb://localhost:27017/yelp-camp'
 
 mongoose.connect(dbURL, {
     useNewUrlParser: true,
